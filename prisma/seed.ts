@@ -20,7 +20,7 @@ const main = async () => {
                 rating: 4.9,
                 overview: "Top-ranked IIT with strong industry connections.",
                 placements: "Average Package: ₹28 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "IIT Kanpur",
@@ -29,7 +29,7 @@ const main = async () => {
                 rating: 4.8,
                 overview: "Known for academic excellence and research.",
                 placements: "Average Package: ₹24 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "IIT Madras",
@@ -38,7 +38,7 @@ const main = async () => {
                 rating: 4.9,
                 overview: "Consistently ranked among India's best engineering colleges.",
                 placements: "Average Package: ₹26 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1564981797816-1043664bf78d",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "IIT Kharagpur",
@@ -56,7 +56,7 @@ const main = async () => {
                 rating: 4.7,
                 overview: "Historic engineering institution with strong placements.",
                 placements: "Average Package: ₹22 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "NIT Trichy",
@@ -65,7 +65,7 @@ const main = async () => {
                 rating: 4.7,
                 overview: "Leading NIT known for academics and placements.",
                 placements: "Average Package: ₹16 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "NIT Surathkal",
@@ -74,7 +74,7 @@ const main = async () => {
                 rating: 4.6,
                 overview: "Popular NIT with strong industry exposure.",
                 placements: "Average Package: ₹15 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1564981797816-1043664bf78d",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "NIT Warangal",
@@ -92,7 +92,7 @@ const main = async () => {
                 rating: 4.5,
                 overview: "Renowned institute in South India.",
                 placements: "Average Package: ₹13 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "NIT Rourkela",
@@ -101,7 +101,7 @@ const main = async () => {
                 rating: 4.5,
                 overview: "Known for technical excellence and innovation.",
                 placements: "Average Package: ₹13 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "IIIT Hyderabad",
@@ -110,7 +110,7 @@ const main = async () => {
                 rating: 4.8,
                 overview: "Top destination for Computer Science studies.",
                 placements: "Average Package: ₹30 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1564981797816-1043664bf78d",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "IIIT Delhi",
@@ -128,7 +128,7 @@ const main = async () => {
                 rating: 4.8,
                 overview: "Strong AI and software engineering programs.",
                 placements: "Average Package: ₹27 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "BITS Pilani",
@@ -137,7 +137,7 @@ const main = async () => {
                 rating: 4.8,
                 overview: "Prestigious private engineering institute.",
                 placements: "Average Package: ₹24 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "VIT Vellore",
@@ -146,7 +146,7 @@ const main = async () => {
                 rating: 4.4,
                 overview: "Large private university with diverse programs.",
                 placements: "Average Package: ₹9 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1564981797816-1043664bf78d",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "MIT Manipal",
@@ -164,7 +164,7 @@ const main = async () => {
                 rating: 4.3,
                 overview: "Popular private university with modern infrastructure.",
                 placements: "Average Package: ₹8 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "DTU",
@@ -173,7 +173,7 @@ const main = async () => {
                 rating: 4.6,
                 overview: "Top state engineering university in Delhi.",
                 placements: "Average Package: ₹18 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
             {
                 name: "NSUT",
@@ -182,7 +182,7 @@ const main = async () => {
                 rating: 4.5,
                 overview: "Highly regarded engineering university in Delhi.",
                 placements: "Average Package: ₹17 LPA",
-                imageUrl: "https://images.unsplash.com/photo-1564981797816-1043664bf78d",
+                imageUrl: "https://images.unsplash.com/photo-1562774053-701939374585",
             },
         ],
     });

@@ -8,6 +8,7 @@ export const GET = async (request: NextRequest) => {
     const search = searchParams.get("search");
     const location = searchParams.get("location");
     const minFees = searchParams.get("minFees");
+    const maxFees = searchParams.get("maxFees");
     const sort = searchParams.get("sort");
 
     const page = Number(searchParams.get("page")) || 1;
@@ -28,10 +29,10 @@ export const GET = async (request: NextRequest) => {
         mode: "insensitive"
       }
     }
-    if (minFees) {
-      where.fees = {
-        gte: Number(minFees),
-      };
+    if (minFees || maxFees) {
+      where.fees = {};
+      if (minFees) where.fees.gte = Number(minFees);
+      if (maxFees) where.fees.lte = Number(maxFees);
     }
 
     let orderBy = {};
@@ -43,6 +44,11 @@ export const GET = async (request: NextRequest) => {
     if (sort === "fees_desc") {
       orderBy = {
         fees: "desc",
+      };
+    }
+    if (sort === "rating") {
+      orderBy = {
+        rating: "desc",
       };
     }
 
