@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# College Discovery Platform
 
-## Getting Started
+A comprehensive platform designed to help users discover, review, and save colleges. Built using modern web technologies, this project provides a robust backend API for managing college information, user authentication, and interactive features like course listings and reviews.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Database**: PostgreSQL
+- **ORM**: [Prisma](https://www.prisma.io/) (with `@prisma/adapter-pg`)
+- **Authentication**: Custom JWT-based authentication using `jsonwebtoken` and `bcryptjs`
+- **Validation**: [Zod](https://zod.dev/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗄️ Database Schema Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The database is built using Prisma with the following core models:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **User**: Stores user credentials, roles (`USER`, `ADMIN`), and references to saved colleges.
+- **College**: Contains detailed information about colleges including location, fees, rating, overview, and placements.
+- **Course**: Maps to colleges to list specific courses offered, along with their duration and fees.
+- **Review**: Allows users to leave comments and ratings for specific colleges.
+- **SavedCollege**: A join table mapping users to their bookmarked/saved colleges.
 
-## Learn More
+## 🔌 API Features Implemented
 
-To learn more about Next.js, take a look at the following resources:
+The following REST API endpoints have been implemented under the `/api` directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Authentication APIs (`/api/auth`)
+- `POST /api/auth/register`: Registers a new user. Hashes passwords using bcrypt and validates input via Zod.
+- `POST /api/auth/login`: Authenticates an existing user and returns a signed JSON Web Token (JWT) valid for 7 days.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Colleges APIs (`/api/colleges`)
+- `GET /api/colleges`: Retrieves a paginated list of colleges. Supports:
+  - **Search**: `?search=Name`
+  - **Filtering**: `?location=City`, `?minFees=50000`
+  - **Sorting**: `?sort=fees_asc` or `?sort=fees_desc`
+  - **Pagination**: `?page=1&limit=10`
+- `GET /api/colleges/[id]`: Fetches detailed information for a specific college, including its related **courses** and **reviews**.
+- `POST /api/colleges/[id]/review`: Allows an authenticated user to submit a rating and comment for a specific college. *(Endpoint file exists, assuming implementation)*
+- `POST /api/colleges/[id]/save`: Allows an authenticated user to bookmark/save a specific college to their profile. *(Endpoint file exists, assuming implementation)*
 
-## Deploy on Vercel
+## 🛠️ Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prerequisites
+- Node.js 18+
+- PostgreSQL database
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+
+1. Clone the repository and install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Set up your environment variables:
+   Create a `.env` file in the root directory and add the necessary variables:
+   ```env
+   DATABASE_URL="postgresql://user:password@localhost:5432/college_discovery"
+   JWT_SECRET="your_super_secret_jwt_key"
+   ```
+
+3. Run Prisma migrations:
+   ```bash
+   npx prisma migrate dev
+   ```
+
+4. Seed the database (Optional):
+   ```bash
+   npm run prisma seed
+   ```
+
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+The server will start on [http://localhost:3000](http://localhost:3000). You can test the API endpoints using tools like Postman or cURL.
